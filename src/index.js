@@ -10,5 +10,5 @@ ReactDOM.render(
 	<Router>
 		<AppWithRouter />
 	</Router>,
-	document.getElementById('root')
+	document.getElementById('root') 
 );
