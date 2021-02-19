@@ -93,7 +93,7 @@ Before you get started, please take a few minutes and get acquainted with this a
 - When we do this, `useContext` is going to return value passed by our `ProductContext` Provider `value` prop. In our case we're getting back an object with two properties. A `products` property and a `addItem` property. We can go ahead and destructure those.
 
 ```js
-const { products, addItem } = useContext(ProductContext);
+`const { products, addItem } = useContext(ProductContext);`
 ```
 
 - Now that we have all of the data we need we can refactor our `Products` component from using props.
