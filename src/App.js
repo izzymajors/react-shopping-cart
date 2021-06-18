@@ -17,15 +17,17 @@ import ProductContext from './context/ProductContext';
 function App() {
 	const [products] = useState(data);
 	const [cart, setCart] = useState(products);
+	console.log(cart);
 
 	
 
 	const addItem = item => {
 		setCart(
-			this.setState(state => ({
-				item: [item, ...state.items]
-			  }))
-		)
+			cart.map( toAdd => {
+				return toAdd.id !== item;
+			})
+		);
+		
 		
 		
 		
@@ -45,7 +47,7 @@ function App() {
 		
 		<div className="App">
 			
-			<ProductContext.Provider value={{products, addItem}}>
+			<ProductContext.Provider value={{products, addItem, removeItem}}>
 				<CartContext.Provider value={cart}>
 			<Navigation cart={cart} />
 
